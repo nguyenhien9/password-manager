@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/electron-vite.animate.svg'
-import './App.css'
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import { ConfigProvider } from "antd";
+import Router from "./routes";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+const queryClient = new QueryClient();
 function App() {
- 
-
   return (
     <>
-      <h1>Hello World</h1>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <ConfigProvider>
+            <Router />
+          </ConfigProvider>
+        </QueryClientProvider>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -8,4 +8,8 @@ export class UserService {
     @InjectModel(User)
     private readonly userModel: typeof User,
   ) {}
+
+  async get(): Promise<User[]> {
+    return this.userModel.findAll();
+  }
 }
