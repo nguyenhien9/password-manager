@@ -3,7 +3,8 @@ function path(root: string, sublink: string) {
 }
 
 const ROOTS_AUTH = "/auth";
-const ROOTS_DASHBOARD = "/";
+const ROOTS_DASHBOARD = "/dashboard";
+const ROOTS_PAGE = "/";
 
 export const PATH_AUTH = {
   root: ROOTS_AUTH,
@@ -13,4 +14,8 @@ export const PATH_AUTH = {
 
 export const PATH_DASHBOARD = {
   root: ROOTS_DASHBOARD,
+};
+export const PATH_PAGE = {
+  root: ROOTS_PAGE,
+  landing_page: path(ROOTS_PAGE, "/"),
 };

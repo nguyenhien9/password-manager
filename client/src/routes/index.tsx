@@ -1,8 +1,15 @@
 import { useRoutes } from "react-router-dom";
-import { DashboardPage, LoginPage, RegisterPage } from "./elements";
+import {
+  DashboardPage,
+  LandingPage,
+  LoginPage,
+  RegisterPage,
+} from "./elements";
 
 export default function Router() {
   return useRoutes([
+    // Page
+    { path: "/", element: <LandingPage /> },
     {
       // Auth
       path: "/auth",
@@ -13,7 +20,7 @@ export default function Router() {
     },
     // Dashboard
     {
-      path: "/",
+      path: "/dashboard",
       element: <DashboardPage />,
     },
   ]);

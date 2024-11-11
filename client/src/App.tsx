@@ -1,15 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routes";
-import { HelmetProvider } from "react-helmet-async";
-
+import { ConfigProvider } from "antd";
 function App() {
   return (
     <>
-      <HelmetProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <ConfigProvider>
           <Router />
-        </BrowserRouter>
-      </HelmetProvider>
+        </ConfigProvider>
+      </BrowserRouter>
     </>
   );
 }

@@ -19,3 +19,8 @@ export const RegisterPage = Loadable(
 export const DashboardPage = Loadable(
   lazy(() => import("../pages/dashboard/DashboardPage"))
 );
+
+// PAGE
+export const LandingPage = Loadable(
+  lazy(() => import("../pages/home/HomePage"))
+);

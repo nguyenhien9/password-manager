@@ -1,11 +1,7 @@
-import { Helmet } from "react-helmet-async";
-
-export default function RegisterPage(){
-    return (
-        <>
-        <Helmet>
-            <title>Register Page</title>
-        </Helmet>
-        </>
-    )
+export default function RegisterPage() {
+  return (
+    <>
+      <h1>Register Page</h1>
+    </>
+  );
 }

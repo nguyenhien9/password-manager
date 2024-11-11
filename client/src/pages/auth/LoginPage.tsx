@@ -1,12 +1,13 @@
-import { Helmet } from "react-helmet-async";
+import { Button } from "antd";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   return (
     <>
-      <Helmet>
-        <title>Login Page</title>
-      </Helmet>
       <div>Login Page</div>
+      <Button>
+        <Link to="/">Sign out</Link>
+      </Button>
     </>
   );
 }

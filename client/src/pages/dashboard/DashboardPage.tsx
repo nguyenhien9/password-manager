@@ -1,11 +1,7 @@
-import { Helmet } from "react-helmet-async";
-
 const DashboardPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Dashboard Page</title>
-      </Helmet>
+      <h1>Dashboard Page</h1>
     </>
   );
 };
