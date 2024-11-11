@@ -2,7 +2,6 @@ import { ApiProperty } from '@nestjs/swagger';
 import {
   IsEmail,
   IsNotEmpty,
-  MaxLength,
   MinLength,
   Matches,
   Length,
@@ -15,14 +14,6 @@ export class RegisterDto {
   @IsEmail({}, { message: 'Email is invalid' })
   @IsNotEmpty({ message: 'Email is required' })
   email: string;
-
-  @ApiProperty({
-    description: 'Username, should be between 8 to 20 characters.',
-  })
-  @IsNotEmpty({ message: 'Username is required' })
-  @MinLength(8, { message: 'Username must be at least 8 characters' })
-  @MaxLength(20, { message: 'Username can be up to 20 characters' })
-  username: string;
 
   @ApiProperty({
     description:

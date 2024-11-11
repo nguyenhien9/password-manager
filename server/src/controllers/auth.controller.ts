@@ -24,7 +24,6 @@ export class AuthController {
     return {
       message: 'Registration successful',
       user: {
-        username: user.username,
         email: user.email,
       },
     };

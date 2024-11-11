@@ -20,7 +20,7 @@ export class AuthService {
 
   async register(registerDto: RegisterDto): Promise<User> {
     const existingUser = await this.userModel.findOne({
-      where: { username: registerDto.username },
+      where: { email: registerDto.email },
     });
     if (existingUser) {
       throw new ConflictException('User exists!');
@@ -30,7 +30,7 @@ export class AuthService {
       email,
       password,
       confirm_password,
-      username,
+
       first_name,
       last_name,
       phone,
@@ -42,7 +42,6 @@ export class AuthService {
     const newUser = await this.userModel.create({
       role_id: RoleEnum.User,
       email: email,
-      username: username,
       password_hash: hashedPassword,
       first_name: first_name,
       last_name: last_name,

@@ -1,27 +1,24 @@
 import { useRoutes } from "react-router-dom";
-import {
-  DashboardPage,
-  LandingPage,
-  LoginPage,
-  RegisterPage,
-} from "./elements";
+import RegisterPage from "../modules/auth/pages/RegisterPage";
+import HomePage from "../modules/main/pages/HomePage";
 
-export default function Router() {
+export default function Routes() {
   return useRoutes([
-    // Page
-    { path: "/", element: <LandingPage /> },
+    //auth
     {
-      // Auth
-      path: "/auth",
+      path: "auth",
       children: [
-        { path: "login", element: <LoginPage /> },
-        { path: "register", element: <RegisterPage /> },
+        {
+          path: "register",
+          element: <RegisterPage />,
+        },
       ],
     },
-    // Dashboard
+
+    // main
     {
-      path: "/dashboard",
-      element: <DashboardPage />,
+      path: "",
+      element: <HomePage />,
     },
   ]);
 }

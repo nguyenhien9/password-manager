@@ -28,7 +28,7 @@ export class User extends Model<User> {
   uuid: string;
   @Column({
     type: DataType.STRING(255),
-    allowNull: false,
+    allowNull: true,
   })
   username: string;
   @Column({

@@ -2,20 +2,16 @@ function path(root: string, sublink: string) {
   return `${root}${sublink}`;
 }
 
+// AUTH_PATH
+
 const ROOTS_AUTH = "/auth";
-const ROOTS_DASHBOARD = "/dashboard";
 const ROOTS_PAGE = "/";
 
-export const PATH_AUTH = {
+export const AUTH_PATH = {
   root: ROOTS_AUTH,
   login: path(ROOTS_AUTH, "/login"),
   register: path(ROOTS_AUTH, "/register"),
 };
-
-export const PATH_DASHBOARD = {
-  root: ROOTS_DASHBOARD,
-};
-export const PATH_PAGE = {
+export const PAGE_PATH = {
   root: ROOTS_PAGE,
-  landing_page: path(ROOTS_PAGE, "/"),
 };

@@ -1,4 +1,4 @@
-import { Suspense, lazy, ElementType } from "react";
+import { Component, ElementType, lazy, Suspense } from "react";
 
 const Loadable = (Component: ElementType) => (props: any) =>
   (
@@ -7,20 +7,13 @@ const Loadable = (Component: ElementType) => (props: any) =>
     </Suspense>
   );
 
-// AUTH
-export const LoginPage = Loadable(
-  lazy(() => import("../pages/auth/LoginPage"))
-);
+// Auth
+
 export const RegisterPage = Loadable(
-  lazy(() => import("../pages/auth/RegisterPage"))
+  lazy(() => import("../modules/auth/pages/RegisterPage"))
 );
 
-// DASHBOARD
-export const DashboardPage = Loadable(
-  lazy(() => import("../pages/dashboard/DashboardPage"))
-);
-
-// PAGE
-export const LandingPage = Loadable(
-  lazy(() => import("../pages/home/HomePage"))
+// Page
+export const HomePage = Loadable(
+  lazy(() => import("../modules/main/pages/HomePage"))
 );
